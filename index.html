@@ -1,243 +1,59 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vedant Sanodiya - Home</title>
+    <meta name="description" content="Portfolio of Vedant Sanodiya, Product Architect and Founder." />
+    <!-- SEO Best Practices -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="resume-wrapper">
+      <nav class="folder-tabs">
+        <a href="/" class="tab active">Home</a>
+        <a href="/experience.html" class="tab">Exp</a>
+        <a href="/projects.html" class="tab">Work</a>
+        <a href="/skills.html" class="tab">Skills</a>
+      </nav>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vedant Sanodiya - Portfolio</title>
-  <meta name="description" content="Portfolio of Vedant Sanodiya, Product Architect and Founder." />
-  <!-- SEO Best Practices -->
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <main class="resume-wrapper">
-    <header>
-      <div class="letterhead">
-        <div class="letterline">role<span>Product Architect & Founder</span></div>
-        <div class="letterline">location<span>Bhopal, India</span></div>
-        <div class="letterline">github<span>github.com/luxw-tf</span></div>
-      </div>
-      <div class="polaroid" id="polaroid-image">
-        <img src="/profile.jpg" alt="Vedant Sanodiya Portrait">
-        <!-- SVG Paperclip -->
-        <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="#2A1612" stroke-width="1.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path
-            d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48">
-          </path>
-        </svg>
-      </div>
-    </header>
-
-    <section class="hero">
-      <h1 class="name">Vedant<br>Sanodiya</h1>
-      <div class="subtitle">resume</div>
-    </section>
-
-    <div class="divider"></div>
-
-    <div class="content-grid">
-      <div class="experiences">
-        <div class="section">
-          <h2 class="section-title">SUMMARY</h2>
-          <div class="exp-desc">
-            Product architect and builder specializing in Web3 infrastructure and developer tooling. Experienced in
-            building developer products, designing protocols, and growing developer ecosystems. Strong focus on smart
-            contract tooling, developer experience, and product strategy.
-          </div>
+      <header id="main-header">
+        <div class="letterhead">
+          <div class="letterline">role<span>Product Architect & Founder</span></div>
+          <div class="letterline">location<span>Bhopal, India</span></div>
+          <div class="letterline">github<span>github.com/luxw-tf</span></div>
         </div>
-
-        <div class="section">
-          <h2 class="section-title">EXPERIENCE</h2>
-
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-time">2025 – Present</span>
-              <span class="exp-role">Fostr</span>
-              <span class="exp-role">Founder</span>
-            </div>
-            <div class="exp-desc">
-              Building a financial infrastructure layer for the music industry through tokenized music assets. Leading
-              protocol architecture, economic design, and product strategy.
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-time">2025 – Present</span>
-              <span class="exp-role">BuilderBase</span>
-              <span class="exp-role">Community Lead</span>
-            </div>
-            <div class="exp-desc">
-              Grew a developer community from 0 to 3,500 members. Led hackathons, developer onboarding initiatives, and
-              ecosystem programs.
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-time">2024 – 2025</span>
-              <span class="exp-role">Freelance</span>
-              <span class="exp-role">Web3 Product</span>
-            </div>
-            <div class="exp-desc">
-              Supported Web3 teams with go-to-market strategy, developer relations, and product positioning. Designed
-              brand assets and product interfaces for early-stage teams.
-            </div>
-          </div>
+        <div class="polaroid" id="polaroid-image">
+          <img src="/profile.jpg" alt="Vedant Sanodiya Portrait">
+          <!-- SVG Paperclip -->
+          <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="#2A1612" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+          </svg>
         </div>
+      </header>
 
-        <div class="section">
-          <h2 class="section-title">PROJECTS</h2>
+      <section class="hero reveal">
+        <h1 class="name">Vedant<br>Sanodiya</h1>
+        <div class="subtitle">resume</div>
+      </section>
 
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-role">Sol2Rust</span>
-              <span class="exp-role">Lead Developer</span>
+      <div class="divider reveal"></div>
+
+      <div class="content-grid">
+        <div class="experiences reveal">
+          <div class="section">
+            <h2 class="section-title">SUMMARY</h2>
+            <div class="exp-desc" style="font-size: 1.2rem; transform-origin: left;">
+              Product architect and builder specializing in Web3 infrastructure and developer tooling. Experienced in building developer products, designing protocols, and growing developer ecosystems. Strong focus on smart contract tooling, developer experience, and product strategy.
             </div>
-            <div class="exp-desc">
-              Developed a Solidity-to-Rust transpiler for Arbitrum Stylus. Enabled EVM developers to port smart
-              contracts to Rust/WASM for improved performance.
+            <div class="exp-desc" style="margin-top: 20px;">
+              Execution-first approach with a strong focus on turning early ideas into functional products. Multiple hackathon wins and shipped tools including Sol2Rust and Pyvax.
             </div>
           </div>
-
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-role">Pyvax</span>
-              <span class="exp-role">Lead Architect</span>
-            </div>
-            <div class="exp-desc">
-              Built a Python-based smart contract compiler for the Avalanche ecosystem. Developed a VS Code extension to
-              streamline smart contract development.
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-role">Apv3rse</span>
-              <span class="exp-role">Product Architect</span>
-            </div>
-            <div class="exp-desc">
-              Created a no-code dApp builder for the Aptos ecosystem to simplify decentralized application development.
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-role">NeuroFit</span>
-              <span class="exp-role">Product Lead</span>
-            </div>
-            <div class="exp-desc">
-              Built a health-focused AI application during a hackathon with applied machine learning.
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="exp-meta">
-              <span class="exp-role">Contract Security</span>
-            </div>
-            <div class="exp-desc">
-              Built a tool to decompose and analyze smart contracts to identify potential vulnerabilities.
-            </div>
-          </div>
-
         </div>
       </div>
-
-      <div class="skills-column">
-        <div class="section">
-          <h2 class="section-title" style="color: var(--text-dark);">
-            <span
-              style="background-color: transparent; border: 1.5px solid var(--text-dark); border-radius: 50%; width: 14px; height: 14px; display: inline-block;"></span>
-            SKILLS
-          </h2>
-
-          <div class="skill-item">
-            <div class="skill-name">Web3 & Engineering</div>
-            <div class="skill-dots">
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-            </div>
-            <div style="font-size: 0.8rem; color: var(--text-dark); margin-top: 4px; line-height: 1.4;">Solidity, Rust,
-              Arbitrum Stylus, Avalanche, Aptos</div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-name">Tooling & Infra</div>
-            <div class="skill-dots">
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-            </div>
-            <div style="font-size: 0.8rem; color: var(--text-dark); margin-top: 4px; line-height: 1.4;">Compiler Design,
-              Transpilers, VS Code Extensions</div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-name">Product Strategy</div>
-            <div class="skill-dots">
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot"></div>
-            </div>
-            <div style="font-size: 0.8rem; color: var(--text-dark); margin-top: 4px; line-height: 1.4;">Developer
-              Experience, GTM Strategy, Product Interfaces</div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-name">Leadership</div>
-            <div class="skill-dots">
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-              <div class="dot filled"></div>
-            </div>
-            <div style="font-size: 0.8rem; color: var(--text-dark); margin-top: 4px; line-height: 1.4;">Technical
-              Documentation, Community Growth</div>
-          </div>
-
-        </div>
-
-        <div class="section">
-          <h2 class="section-title" style="color: var(--text-dark);">
-            <span
-              style="background-color: transparent; border: 1.5px solid var(--text-dark); border-radius: 50%; width: 14px; height: 14px; display: inline-block;"></span>
-            ACHIEVEMENTS
-          </h2>
-          <ul
-            style="font-size: 0.85rem; padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 10px; line-height: 1.5;">
-            <li>Multiple hackathon wins and finalist placements in Web3, AI, & tooling.</li>
-            <li>Built and scaled a developer community to over 3,500 members.</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title" style="color: var(--text-dark);">
-            <span
-              style="background-color: transparent; border: 1.5px solid var(--text-dark); border-radius: 50%; width: 14px; height: 14px; display: inline-block;"></span>
-            OPEN SOURCE
-          </h2>
-          <ul
-            style="font-size: 0.85rem; padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 10px; line-height: 1.5;">
-            <li>Contributed to Web3 tooling, transpilers and developer utilities.</li>
-            <li>Supported ecosystem initiatives for Solidity and Rust.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </main>
-  <script type="module" src="/main.js"></script>
-</body>
-
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>

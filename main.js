@@ -1,32 +1,78 @@
 import './style.css'
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Add subtle parallax effect to the polaroid
-    const polaroid = document.getElementById('polaroid-image');
-    
-    document.addEventListener('mousemove', (e) => {
-        const x = (window.innerWidth / 2 - e.pageX) / 80;
-        const y = (window.innerHeight / 2 - e.pageY) / 80;
-        
-        if (polaroid && window.innerWidth > 800) {
-            polaroid.style.transform = `rotate(5deg) translate(${x}px, ${y}px)`;
+    // 1. Sticky Header Shrink Effect
+    const header = document.getElementById('main-header');
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            header?.classList.add('scrolled');
+        } else {
+            header?.classList.remove('scrolled');
         }
-    });
+    };
+    window.addEventListener('scroll', handleScroll);
 
-    // Make the sections fade in gracefully
-    const observer = new IntersectionObserver((entries) => {
+    // 2. Intersection Observer for Scroll Reveals
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
+                
+                // If it's a skill item, animate the dots
+                if (entry.target.classList.contains('skill-item')) {
+                  animateDots(entry.target);
+                }
             }
         });
-    }, { threshold: 0.1 });
+    }, revealOptions);
 
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'all 0.6s ease-out';
-        observer.observe(section);
+    document.querySelectorAll('.reveal').forEach(el => {
+        revealObserver.observe(el);
     });
+
+    // 3. Staggered Item Animation
+    const staggerItems = document.querySelectorAll('.experience-item, .project-card, .section');
+    staggerItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.1}s`;
+        revealObserver.observe(item);
+    });
+
+    // 4. Skill Dots Animation Function
+    function animateDots(container) {
+        const dots = container.querySelectorAll('.dot.filled');
+        dots.forEach((dot, index) => {
+            dot.style.opacity = '0';
+            dot.style.transform = 'scale(0)';
+            dot.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            
+            setTimeout(() => {
+                dot.style.opacity = '1';
+                dot.style.transform = 'scale(1)';
+            }, index * 100);
+        });
+    }
+
+    // 5. Parallax for Polaroid (Desktop Only)
+    const polaroid = document.getElementById('polaroid-image');
+    if (polaroid && window.innerWidth > 1024) {
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            polaroid.style.transform = `rotate(5deg) translate(${x}px, ${y}px)`;
+        });
+    }
+
+    // Initial check for scroll
+    handleScroll();
+});
+
+// Adding a global transition mask for page navigation
+window.addEventListener('beforeunload', () => {
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.5s ease';
 });
